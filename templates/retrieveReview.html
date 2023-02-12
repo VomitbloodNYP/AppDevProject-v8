@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}PokeImpact - Retrieve Review{% endblock %}
+
+{% block content %}
+<html>
+  <head>
+  <style>
+    body{
+    background-image: url("https://wallpapercave.com/wp/wp3961266.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+    tr:nth-child(even) > td:nth-child(1) {
+        width:400px;
+    }
+
+
+        input[type=radio] {
+      display: none;
+    }
+
+    input[type=radio] + label {
+      font-size: 24pt;
+      padding: 0 2px;
+    }
+
+    input[type=radio]:checked ~ label {
+      color: goldenrod;
+    }
+
+    div.rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+  </style>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+  </head>
+<h1 h1 style="font-size: 40px; color: #FFFFFF;">Reviews</h1>
+<div style="color: #FFFFFF;">
+  {% if count == 0 %}
+  <p>There are no customers.</p>
+  {% elif count == 1 %}
+  <p>There is 1 customer.</p>
+  {% else %}
+  <p>There are {{ count }} customers.</p>
+  {% endif %}
+</div>
+<div>
+  <table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th>Rating</th>
+        <th>Name</th>
+        <th>Review</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for review in reviews_list %}
+        <tr>
+  <td>
+    <div class="form-group">
+      <div class="rating">
+        <input type="radio" id="star5" name="rating{{review.id}}" value="5" {% if review.rating == 5 %}checked{% endif %}>
+        <label for="star5"><i class="fas fa-star"></i></label>
+        <input type="radio" id="star4" name="rating{{review.id}}" value="4" {% if review.rating == 4 %}checked{% endif %}>
+        <label for="star4"><i class="fas fa-star"></i></label>
+        <input type="radio" id="star3" name="rating{{review.id}}" value="3" {% if review.rating == 3 %}checked{% endif %}>
+        <label for="star3"><i class="fas fa-star"></i></label>
+        <input type="radio" id="star2" name="rating{{review.id}}" value="2" {% if review.rating == 2 %}checked{% endif %}>
+        <label for="star2"><i class="fas fa-star"></i></label>
+        <input type="radio" id="star1" name="rating{{review.id}}" value="1" {% if review.rating == 1 %}checked{% endif %}>
+        <label for="star1"><i class="fas fa-star"></i></label>
+      </div>
+    </div>
+  </td>
+          <td>{{ review.name }}</td>
+          <td>{{ review.reviews }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+</div>
+</html>
+{% endblock %}
+
+

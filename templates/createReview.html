@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}PokeImpact - Create Review{% endblock %}
+
+{% block content %}
+{% from "includes/_formHelper.html" import render_field %}
+<html>
+  <head>
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+  <style>
+    body{
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNb2cOgaVW8xXHTL9xMBdB6d-awkIR7jQaVOFDVSJjacqqVyVbwiO8a3PGR1Zf0_HKsnmzFQBLpzSH1NFFb2oREo8cHVaulUgbNdXDV-r8x5SZuM2s-jUQ29A4dDqM2b1QdPSId89Rrz_ZFl8NvXDqZAGNkdcwbFDRXjC2kABi3UNipPjWxG0-EE8tow/s1920/cute-pokemon-wallpaper-1920x1080.jpg");
+    background-repeat: no-repeat;
+    Background-size: cover;
+    background position: -600px -100px;
+    }
+
+    input[type=radio] {
+      display: none;
+    }
+
+    input[type=radio] + label {
+      font-size: 30pt;
+      padding: 0 5px;
+    }
+
+    input[type=radio]:checked ~ label {
+      color: goldenrod;
+    }
+
+    div.rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+  </style>
+  </head>
+  <body>
+    <h1 style="font-size: 40px">Make a Review</h1>
+    <div style="border: 1px solid black; padding: 30px;  width: 470px; background-color: pink;">
+
+
+    <form method="POST" action="/createReview">
+
+        <div class="form-group">
+            <div class="rating">
+              <input type="radio" id="star5" name="rating" value="5">
+              <label for="star5"><i class="fas fa-star"></i></label>
+              <input type="radio" id="star4" name="rating" value="4">
+              <label for="star4"><i class="fas fa-star"></i></label>
+              <input type="radio" id="star3" name="rating" value="3">
+              <label for="star3"><i class="fas fa-star"></i></label>
+              <input type="radio" id="star2" name="rating" value="2">
+              <label for="star2"><i class="fas fa-star"></i></label>
+              <input type="radio" id="star1" name="rating" value="1">
+              <label for="star1"><i class="fas fa-star"></i></label>
+            </div>
+        </div>
+
+
+
+            <div id="prof">
+            <div class="form-group">
+            {{ render_field(form.reviews, class="form-control") }}
+            </div>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary"/>
+
+          </form>
+
+
+     </div>
+
+  </body>
+  </html>
+{%endblock%}

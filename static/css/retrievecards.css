@@ -1,0 +1,93 @@
+@font-face {
+	font-family: default-font;
+  	src: url(../font-face/default-font.ttf);
+}
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "default-font"
+}
+
+body {
+    background-color: #222222;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white !important;
+}
+
+div.container-fluid {
+	padding: 0;
+}
+
+.wrapper{
+    width: 95%;
+    margin: 0 auto;
+}
+#search-container{
+    margin:1em 0;
+}
+
+#search-container input.norm{
+    background-color:transparent ;
+    width: 40%;
+    border-bottom: 2px solid #110f29;
+    padding: 1em 0.3em;
+}
+#search-container input.norm:focus{
+    border-bottom-color: #6759ff;
+}
+#search-container input.button{
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: #6759ff;
+    border-radius:5px;
+    margin-top: 0.5em;
+}
+.button-value{
+    border:2px solid #6759ff;
+    padding: 1em 2.2em;
+    border-radius: 3em;
+    background-color: transparent;
+    color: #6759ff;
+    cursor:pointer;
+}
+.active{
+    background-color: #6759ff;
+    color: black;
+}
+
+input.button{
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: #6759ff;
+    border-radius:5px;
+    margin-top: 0.5em;}
+
+/*bruh bootstrap*/
+.table {
+    color: white !important;
+}
+
+.table-striped {
+    color: white !important;
+}
+
+tr {
+    color: white !important;
+}
+
+td {
+    color: white !important;
+}
+
+.modal-content {
+    background-color: #222222;
+    color: white !important;
+}
+
+.norm

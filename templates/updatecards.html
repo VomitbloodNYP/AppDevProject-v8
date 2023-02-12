@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "base.html" %}
+{% block title %}PokeImpact - Update Cards{% endblock %}
+
+{% block content %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<head>
+    <style>
+        body {
+            background-color: #222222;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+        }
+        .form-control {
+            background-color: rgba(65, 65, 65, 0.9);
+            border-radius: 10px;
+            color: white;
+            max-width: 20%;
+        }
+
+        .form-control:focus {
+            outline: solid yellow;
+            background-color: rgba(85, 85, 85, 0.9);
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+<script>
+  function validateForm() {
+    var check = document.getElementById("check");
+    var img_file = document.getElementById("img_file");
+    var img_file_error = document.getElementById("img_file_error");
+    console.log(img_file.value);
+    if(img_file.value == ""){
+    check.value = "failed"
+    return true;
+    }
+    else{
+    var extension = img_file.value.split('.').pop().toLowerCase();
+    if(extension != "jpg" && extension != "jpeg" && extension != "png"){
+    img_file_error.innerHTML = "Invalid image type (Only accepts png, jpg or jpeg)";
+    return false;}
+    else{
+    return true;
+    }
+    }
+    }
+
+</script>
+
+  <form method="post" action ='/submit-update/{{ data.id }}' enctype="multipart/form-data" onsubmit="return validateForm()" class="form-horizontal">
+      <br>
+    <div class="input-form">
+        <label for="name">Name(Only alphabets)</label>
+        <input type="text" id="name" name="name" class="form-control" value ='{{data.name}}' pattern ="[A-Za-z]+" oninvalid="this.setCustomValidity('Name should only contain alphabets')" oninput="this.setCustomValidity('')"required><br>
+    </div>
+    <input type="hidden" name = 'id' value = >
+     <div class ='input-form'>
+        <label for="price">Price </label><br>
+        <input type="number" id ="price" name = "price" value= '{{data.price}}' class="form-control" step='.01' oninvalid="this.setCustomValidity('Price should only be up to 2dp')" oninput="this.setCustomValidity('')"required>
+         </div><br>
+     <div class ='input-form'>
+        <label for="type">Type </label><br>
+        <select class="btn btn-warning dropdown-toggle dropdown-toggle-split" id="type" name="type"value="{{data.type}}">
+           <option value ='{{data.type}}' hidden="hidden"> {{data.type}}</option>
+          <option value="Fire">Fire</option>
+          <option value="Fighting">Fighting</option>
+          <option value="Dragon">Dragon</option>
+          <option value="Lightning">Lightning</option>
+          <option value="Psychic">Psychic</option>
+            <option value="Grass">Grass</option>
+            <option value="Water">Water</option>
+            <option value="Darkness">Darkness</option>
+            <option value="Metal">Metal</option>
+            <option value="Fairy">Fairy</option>
+            <option value="Colorless">Colorless</option>
+        </select>
+        <br>
+         </div><br>
+    <div class="input-form">
+    <label for ="rarity">Rarity</label><br>
+        <select class="btn btn-warning dropdown-toggle dropdown-toggle-split" id="rarity" name="rarity" value = '{{data.rarity}}'>
+            <option value ='{{data.rarity}}' hidden="hidden"> {{data.rarity}}</option>
+          <option value="Ultra Rare">Ultra Rare</option>
+          <option value="Rare Holo Ex">Rare Holo Ex</option>
+          <option value="Rare Holo Gx">Rare Holo Gx</option>
+          <option value="Rare Holo Lv.X">Rare Holo Lv.X</option>
+            <option value ="Rare Prime">Rare Prime</option>
+            <option value ="Legend">Legend</option>
+            <option value ="Rare Ultra">Rare Ultra</option>
+            <option value ="Rare Ace">Rare Ace</option>
+            <option value ="Rainbow Rare">Rainbow Rare</option>
+            <option value ="Radiant Rare">Radiant Rare</option>
+        </select>
+    </div><br>
+      <div class="input-form">
+    <label for ="booster">Series</label><br>
+        <select class="btn btn-warning dropdown-toggle dropdown-toggle-split" id="booster" name="booster" value ="{{data.booster}}">
+            <option value ='{{data.booster}}' hidden="hidden"> {{data.booster}}</option>
+          <option value="Crown Zenith">Crown Zenith</option>
+          <option value="Silver Tempest">Silver Tempest</option>
+          <option value="Lost Origin">Lost Origin</option>
+          <option value="Astral Radiance">Astral Radiance</option>
+            <option value ="Brilliant stars">Brilliant Stars</option>
+            <option value ="Celebrations">Celebrations</option>
+            <option value ="Evolving skies">Evolving Skies</option>
+            <option value ="Vivid voltage">Vivid Voltage</option>
+            <option value ="Sun & moon">Sun & Moon</option>
+        </select>
+    </div><br>
+    <div class="input-form">
+        <label for="description">Description</label><br>
+        <input type="text" value= '{{data.description}}' id="description" name="description" class="form-control"><br>
+    </div>
+     <p><strong>Upload Image Here:(optional)</strong></p>
+    <input type="file" name="img_file" id="img_file">
+    <span id="img_file_error" style="color: red"></span><br>
+      Current image:
+        <img src="{{url_for('image', id=data.id)}}" alt="Card image" width="200" height="200">
+      <br>
+    <input type ="hidden" name="check" id="check" value = "0">
+    <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+
+
+
+</body>
+{% endblock %}
+</html>

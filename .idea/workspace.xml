@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="30238842-9540-4c91-901e-4aaa7ee79621" name="Changes" comment="chingchong">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CardInBasket.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pack.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalDetails.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Review.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__flask_app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basket.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/Database.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_details.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/whos-that-pokemon.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/whos-that-pokemon.opus" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/basketYX.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/checkoutYX.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/gachastore materials/astralradiance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/gachastore materials/celebrations.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/gachastore materials/chilling.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/gachastore materials/cosmiceclipse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/gachastore materials/crownzenith.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/gachastore materials/evolving.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/gachastore materials/lostorigin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/gachastore materials/scarletviolet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/gachastore materials/silvertempest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/gachastore materials/stars.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/gachastore materials/sunandmoon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/gachastore materials/vividvoltage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/homepage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/overseer.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/packListingYX.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/pokemon_pixel_font.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/retrievecards.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/store.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/storeYX.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font-face/.uuid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font-face/default-font.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/account-background-4k.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/account-background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/admin-dashboard-background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/banner1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/banner2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/great-success.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/homepage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/homepage1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/homepg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/pokemoncards/crown zenith/leafeon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/pokemoncards/crown zenith/melony.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/pokemoncards/crown zenith/mewtwo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/pokemoncards/crown zenith/zeraora.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/sad-borat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/storeBackgroundYX.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/whos-that-pokemon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/whos_that_pokemon.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vid/basket-live-background.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vid/store-live-background.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/AccountDelete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ChangeProfile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ForgotPassword.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ResetPassword.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/UpdatePassword.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/addcard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admindashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/basket.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/checkoutGacha.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/createReview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/gachadisplay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/gachastock.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/gachastore.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/_adminnavbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/_formHelper.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/_navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/_sessionnavbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/myReview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/packListing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/retrieveReview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/retrievecard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/store.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/updateReview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/updatecards.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="855434c1-08e2-4412-9eda-2601ccc53ad5" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Lddh4BUz63JVQVqY1dvD1j2T77" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/vomitblood/AppDevProject-v7",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Python.AppDevProject-v8">
+    <configuration name="AppDevProject-v8" type="PythonConfigurationType" factoryName="Python">
+      <module name="AppDevProject-v8" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__flask_app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="AppDevProject-v8" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30238842-9540-4c91-901e-4aaa7ee79621" name="Changes" comment="" />
+      <created>1676205008644</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676205008644</updated>
+      <workItem from="1676205010136" duration="16180000" />
+      <workItem from="1676229930518" duration="35000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chingchong" />
+    <option name="LAST_COMMIT_MESSAGE" value="chingchong" />
+  </component>
+</project>

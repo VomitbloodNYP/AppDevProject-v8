@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}GREAT SUCCESS{% endblock %}
+
+{% block content %}
+{% from "includes/_formHelper.html" import render_field %}
+<h1 class="display-4">Success!</h1>
+<p>wawaweewa</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h1><span class="material-symbols-outlined" id="great-success">thumb_up</span>&nbsp great success &nbsp<span class="material-symbols-outlined" id="great-success">thumb_up</span></h1>
+      <img width=400px height=300px src="{{url_for('static', filename='img/great-success.jpg')}}"/>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

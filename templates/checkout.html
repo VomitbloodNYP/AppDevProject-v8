@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}PokeImpact - Checkout{% endblock %}
+
+{% block content %}
+{% from "includes/_formHelper.html" import render_field %}
+<head>
+  <link rel="stylesheet" href="static/css/checkoutYX.css">
+</head>
+<form method="POST" action="">
+  <div class="container big-chungus">
+    <h1 class="display-4">Checkout for Card Store</h1>
+    <div class="row">
+      <div class="col-sm">
+        <div class="row">
+          <h5><strong>1. Choose a delivery address</strong></h5>
+          <div>
+            {{ render_field(personal_details_form.city, class="form-control") }}<br>
+            {{ render_field(personal_details_form.full_name, class="form-control") }}<br>
+            {{ render_field(personal_details_form.phone_number, class="form-control") }}<br>
+            {{ render_field(personal_details_form.zip, class="form-control") }}<br>
+            {{ render_field(personal_details_form.address, class="form-control") }}<br>
+          </div>
+        </div>
+        <hr><br>
+        <div class="row">
+          <h5><strong>2. Choose a payment method</strong></h5>
+          <div>
+            {{ render_field(personal_details_form.card_number, class="form-control") }}<br>
+            {{ render_field(personal_details_form.card_holder_name, class="form-control") }}<br>
+            {{ render_field(personal_details_form.expiry_date, class="form-control") }}<br>
+            {{ render_field(personal_details_form.cvv, class="form-control") }}<br>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm right-panel">
+        <div class="row">
+          <h5>Order Total: ${{  subtotal  }}</h5>
+        </div>
+        <div class="row">
+          <a href="success"><button class="btn btn-warning">Order now</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}

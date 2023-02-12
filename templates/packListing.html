@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+{% block title %}PokeImpact - Pack Listing{% endblock %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/packListingYX.css') }}">
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,300;1,400;1,500&display=swap');
+</style>
+  <script>
+    function validateForm() {
+        var img_file = document.getElementById("img_file");
+        var img_file_error = document.getElementById("img_file_error");
+        if (img_file == "") {
+            img_file_error.innerHTML= "Please select an image";
+            return false;
+        }
+        else {
+            var extension = img_file.value.split('.').pop().toLowerCase();
+            if (extension != "jpg" && extension != "jpeg" && extension != "png") {
+                img_file_error.innerHTML = "Invalid image type (Only accepts png, jpg or jpeg)";
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    }
+</script>
+</head>
+<body>
+        <img src="{{url_for('image', id=displayThisCard.id)}}" alt="IMAGE BROKEN!!1!!1!!1" class="cardDisplayImg">
+<div class="container big-chungus">
+  <section class="shop" id="shop">
+    <div class="container">
+
+      <div class="box">
+
+        <div class="content">
+          <h3><strong>{{ displayThisCard.name }}</strong></h3>
+          <p>{{ displayThisCard.description  }}</p>
+          <p>Type: {{ displayThisCard.type  }}</p>
+          <p>Rarity: {{ displayThisCard.rarity  }}</p>
+          <h4 class="display-4"><strong>Price: ${{ displayThisCard.price }}</strong></h4>
+          <form method="POST" action="">
+            <input type="submit" value="Add to basket" class="btn btn-warning"/>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+{% endblock %}
+</html>

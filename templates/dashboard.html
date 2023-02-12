@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}PokeImpact - Dashboard{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <section class="home" id="home">
+            <div class="container">
+                <div class="text-box">
+                    <h1>PokeImpact</h1>
+                    <h3>The Best Pokemon E-commerce Website</h3>
+                </div>
+            </div>
+        </section>
+        <section title="about-us" class="about-us" id="about-us">
+            <p class="home_page_store_header">About Us</p>
+            <center>
+                PokeImpact was founded in 2022 by a group of Pokemon fans and entrepreneurs who saw an opportunity to bring the excitement of Pokemon to a new platform. With the rise of gacha games and e-commerce websites, they saw an opportunity to combine the two and create a unique experience for Pokemon fans.
+The team behind PokeImpact worked tirelessly to develop a platform that would allow players to collect Pokemon cards, just like they would in real life. But unlike physical cards, PokeImpact also added the excitement of gacha mechanics, allowing players to spend real money to pull for random Pokemon cards.
+            </center>
+
+
+            </div>
+        </section>
+        <section id="banner2" class="section-m1">
+            <h2>Visit our amazing stores</h2>
+            <a href="/store"><button class="banner2">Card Store</button></a> <br>
+            <a href="/gachastore"><button class="banner2">Gacha Store</button></a>
+        </section>
+    </body>
+{% endblock %}

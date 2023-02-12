@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}PokeImpact - Basket{% endblock %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="static/css/basketYX.css">
+</head>
+<body>
+<video autoplay muted loop id="myVideo">
+  <source src="../static/vid/basket-live-background.mp4" type="video/mp4">
+</video>
+<div class="container big-chungus">
+  <div class="row">
+    <div class="col-sm">
+      {% if count == 0 %}
+        <h1 class="display-4">Basket</h1>
+        <a href="/"><button type="button" class="btn btn-success">Back to Store</button></a> <br><br>
+        <h4 class="display-7">You basket! Click <a href="/store">here</a> to add more cards.</h4>
+      {% else %}
+        <h1 class="display-4">Basket</h1>
+        <a href="/store"><button type="button" class="btn btn-success">Back to Store</button></a> <br><br>
+        Number of Items: <strong>{{ count }}</strong>
+        <table class="table table-striped">
+          <thead>
+              <tr>
+                <th scope="col">Card Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Type</th>
+                <th scope="col">Rarity</th>
+                <th scope="col">Image</th>
+                <th scope="col">Description</th>
+                <th scope="col">Booster</th>
+              </tr>
+          </thead>
+          <tbody>
+            {% for basket in basket_list %}
+              <tr>
+                <td>{{ basket.get_name() }}</td>
+                <td>{{ basket.get_price() }}</td>
+                <td>{{ basket.get_type() }}</td>
+                <td>{{ basket.get_rarity() }}</td>
+                <td><img src="{{ url_for('image', id=basket.get_id()) }}" width="100px" height="100px"></td>
+                <td>{{ basket.get_description() }}</td>
+                <td>{{ basket.get_booster() }}</td>
+                <td>
+                  <a href="/packListing/{{  basket.get_id()  }}"><button class="btn btn-primary">View</button></a>
+                </td>
+                <td>
+                  <form method="POST" action="{{url_for('delete_pack', id=basket.get_id())}}">
+                      <input type="submit" value="Delete" class="btn btn-danger"/>
+                  </form>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        Subtotal: <strong>${{ subtotal }}</strong> <br><br>
+        <a href="/checkout"><button type="button" class="btn btn-warning">Checkout</button></a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+</body>
+{% endblock %}

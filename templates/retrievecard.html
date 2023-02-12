@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+{% block title %}PokeImpact - Retrieve Cards{% endblock %}
+
+{% block content %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/retrievecards.css') }}">
+<link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class = "wrapper">
+  <div id = 'search-container'>
+  <form action="/filter" method="post">
+  <input type="text" name="filter_name" id='filter_name' class='norm'placeholder="Search", value = "{{query}}">
+    <input type ='submit' id='searchs' class='button'value ='Filter'>
+  </div>
+  <div id = 'buttons'>
+    <input type="submit" class="button-value" name="filtergrp" id="All" value="All">
+    <input type="submit" class="button-value" name="filtergrp" id="UR" value="Ultra Rare">
+    <input type="submit" class="button-value" name="filtergrp" id="RHEX" value="Rare Holo Ex">
+    <input type="submit" class="button-value" name="filtergrp" id="RHGX" value ="Rare Holo Gx">
+    <input type="submit" class="button-value" name="filtergrp" id="RHLX" value ="Rare Holo Lv.X">
+    <input type="submit" class="button-value" name="filtergrp" id="RP" value = "Rare Prime">
+    <input type="submit" class="button-value" name="filtergrp" id="L" value = "Legend">
+    <input type="submit" class="button-value" name="filtergrp" id="RU" value = "Rare Ultra">
+    <input type="submit" class="button-value" name="filtergrp" id="RA" value = "Rare Ace">
+    <input type="submit" class="button-value" name="filtergrp" id="RR" value = "Rainbow Rare">
+    <input type="submit" class="button-value" name="filtergrp" id="RAD" value = "Radiant Rare">
+  </div>
+</div>
+</form>
+<form action="/exportcard" method="post">
+  <input type="submit"class="button" value ='Export'>
+</form>
+<script>
+const inputs = document.querySelectorAll('.button-value');
+
+// Get the selected input from local storage or set it to null
+let selectedInput = localStorage.getItem('selectedInput') || null;
+
+inputs.forEach(input => {
+  // Add click event listener to each input
+  input.addEventListener('click', event => {
+    // Remove the highlighted class from all inputs
+    inputs.forEach(input => input.classList.remove('active'));
+
+    // Add the highlighted class to the clicked input
+    event.target.classList.add('active');
+
+    // Store the id of the selected input in local storage
+    localStorage.setItem('selectedInput', event.target.id);
+
+    // Update the selected input variable
+    selectedInput = event.target.id;
+  });
+
+  // If the id of the input matches the selected input, add the highlighted class
+  if (input.id === selectedInput) {
+    input.classList.add('active');
+  }
+});
+</script>
+
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Type</th>
+    <th>Rarity</th>
+    <th>Image</th>
+    <th>Description</th>
+    <th>Booster</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for card in data %}
+  <tr>
+    <td>{{ card.id }}</td>
+    <td>{{ card.name }}</td>
+    <td>${{ card.price }}</td>
+    <td>{{ card.type }}</td>
+    <td>{{ card.rarity }}</td>
+    <td><img src="{{url_for('image', id=card.id)}}" alt="image" height=100px width = 100px></td>
+    <td>{{ card.description }}</td>
+    <td>{{ card.booster }}</td>
+    <td>
+      <form action="/updateCards/{{  card.id  }}" method="get">
+        <input class="btn btn-warning" type="submit"value="Update">
+      </form>
+      </td>
+    <td>
+<form action="{{url_for('delete', id=card.id)}}" method="POST">
+<!--            <input type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete {{card.name}} ?');">-->
+<!-- Button to Open the Modal -->
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal_{{card.id}}">
+  Delete
+</button>
+
+<!-- The Modal -->
+<div class="modal" id="myModal_{{card.id}}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Delete Confirmation</h4>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Are you sure you want to delete {{card.name}}?
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <input type="submit" value="Delete" class="btn btn-danger">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+          </form>
+        </td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</body>
+{% endblock %}
+
+</html>

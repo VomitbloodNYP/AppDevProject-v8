@@ -1,0 +1,85 @@
+@font-face {
+	font-family: default-font;
+  	src: url(../font-face/default-font.ttf);
+}
+
+* {
+    font-family: default-font;
+}
+
+body {
+    background-image: url("../img/storeBackgroundYX.png");
+    background-color: #212529;
+    background-size: cover;
+}
+
+div.container-fluid {
+	padding: 0;
+}
+
+.form-control:focus {
+    outline: solid yellow;
+    background-color: rgba(65, 65, 65, 0.9);
+    border-radius: 10px;
+    color: white;
+}
+
+.listing-grid {
+    background-color: #eaeaea;
+    padding: 5px 10px 10px 10px;
+    border-radius: 15px;
+    min-width: 100%;
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.right-panel {
+    width: 20%;
+    height: 30%;
+    max-width: 20% !important;
+    /*border: solid black 2px;*/
+    border-radius: 15px;
+    padding: 15px;
+}
+
+#great-success {
+    color: orange;
+}
+
+.big-chungus {
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    margin-top: 45px;
+}
+
+/*bruh bootstrap*/
+.table {
+    color: white !important;
+}
+
+.table-striped {
+    color: white !important;
+}
+
+tr {
+    color: white !important;
+}
+
+td {
+    color: white !important;
+}
+
+.form-control {
+    background-color: rgba(65, 65, 65, 0.9);
+    border-radius: 10px;
+    color: white;
+}
+
+hr {
+    border: 2px solid white;
+}

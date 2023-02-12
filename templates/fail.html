@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}PokeImpact{% endblock %}
+
+{% block content %}
+{% from "includes/_formHelper.html" import render_field %}
+<h1 class="display-4">Fail</h1>
+<p>not nice!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h1><span class="material-symbols-outlined" id="great-success">thumb_down_off</span>&nbsp this no good &nbsp<span class="material-symbols-outlined" id="great-success">thumb_down_off</span></h1>
+      <img width=400px height=300px src="{{url_for('static', filename='img/sad-borat.jpg')}}"/>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

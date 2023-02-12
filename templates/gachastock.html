@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+{% block title %}PokeImpact - Out of stock{% endblock %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="center">
+          <thead>
+            <h1>Item is out of stock</h1>
+          </thead>
+          <tbody>
+            <a href="#" onclick="history.back();"><button type="button" class="btn btn-primary">Go Back</button></a>
+          </tbody>
+        </div>
+    </div>
+</body>
+{% endblock %}
+
+</html>
